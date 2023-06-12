@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "TNRD, BepInEx",
+  "classifications": [ "Zeepkist", "BepInEx 5" , "Plugin" ],
+  "identity": "Zeepkist.BepInEx5.Plugin",
+  "name": "Zeepkist BepInEx 5 Plugin",
+  "shortName": "zeepkistbepinex5plugin",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "preferNameDirectory": true,
+  "sourceName": "Zeepkist.BepInEx5.PluginTemplate",
+  "symbols": {
+    "TargetFramework": {
+      "type": "parameter",
+      "description": "The target framework for the project",
+      "datatype": "text",
+      "defaultValue": "net472",
+      "replaces": "net472"
+    },
+    "Description": {
+      "type": "parameter",
+      "description": "Plugin description",
+      "datatype": "text",
+      "replaces": "My Zeepkist plugin",
+      "defaultValue": "My Zeepkist plugin"
+    },
+    "Version": {
+      "type": "parameter",
+      "description": "Plugin version",
+      "datatype": "text",
+      "defaultValue": "1.0.0"
+    },
+    "VersionImpl": {
+      "type": "generated",
+      "generator": "join",
+      "replaces": "<Version>1.0.0</Version>",
+      "parameters": {
+        "symbols": [
+          {
+            "type": "const",
+            "value": "<Version>"
+          },
+          {
+            "type": "ref",
+            "value": "Version"
+          },
+          {
+            "type": "const",
+            "value": "</Version>"
+          }
+        ]
+      }
+    }
+  }
+}
