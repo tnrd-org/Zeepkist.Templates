@@ -4,6 +4,7 @@ using HarmonyLib;
 namespace Zeepkist.BepInEx5.PluginTemplate;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInDependency("ZeepSDK")]
 public class Plugin : BaseUnityPlugin
 {
     private Harmony harmony;
